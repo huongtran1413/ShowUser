@@ -8,16 +8,23 @@ import styles from '../../styles/Coder.module.css'
 export const getStaticProps = async() => {
     const res = await fetch('https://jsonplaceholder.typicode.com/users');
     const data = await res.json();
-   
+    console.log(1)
+    console.log(data)
     return {
-        defaultProps: {
+        props: {
             coders : data
         },
        
     };
+    console.log(2)
+    console.log(coders)
 }
 
-export default function AllCoders(coders) {
+export default function AllCoders(props) {
+    console.log(4)
+    console.log(props);
+    const {coders} = props
+    console.log(3)
     console.log(coders);
     return (
         <>
@@ -27,7 +34,7 @@ export default function AllCoders(coders) {
         </Head>
         <div>
             <h1>All Coders</h1>
-            {coders.map((coder) => (
+            {Array.isArray(coders) && coders.map((coder) => (
                 <Link href = {'/coders/' + coder.id} key = {coder.id}>
                     <a className={styles.single}>
                         <h3>{coder.name}</h3>
