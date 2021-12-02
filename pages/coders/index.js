@@ -33,7 +33,7 @@ export default function AllCoders(props) {
             <meta name="keyword" content="coders"></meta>    
         </Head>
         <div>
-            <h1>All Coders</h1>
+            <h1 className="header_title">All Coders</h1>
             {Array.isArray(coders) && coders.map((coder) => (
                 <Link href = {'/coders/' + coder.id} key = {coder.id}>
                     <a className={styles.single}>

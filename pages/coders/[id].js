@@ -40,7 +40,7 @@ export default function DetailCoder( {coder}) { // {lay 1 array tu cai object tr
     console.log(coder)
     return (
         <div>
-            <h1>{coder.name} Detail</h1>
+            <h1 className="header_title">{coder.name} Detail</h1>
             <table className={styles.table}>
                 <tr>
                     <th>Name</th>

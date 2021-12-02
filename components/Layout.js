@@ -10,9 +10,7 @@ export default function Layout({children}) {
                     <Navbar></Navbar>
                 </div>
                 <div className="col-9">
-                    <div className="container">
-                        {children}
-                    </div>
+                    {children}
                 </div>
             </div>
            

@@ -27,7 +27,7 @@ export default function Navbar() {
                         <a className={styles.hex_content}>
                             <span className={styles.hex_content_inner}>
                                 <span className={styles.icon}>
-                                    {/* <i className="fa fa_universal_access"></i> */}
+                                    <i className="fa fa_universal_access"></i>
                                 </span>
                                 <span className={styles.title}>TodoList</span>
                             </span>
@@ -50,6 +50,7 @@ export default function Navbar() {
                         <a  className={styles.hex_content}>
                             <span className={styles.hex_content_inner}>
                                 <span className={styles.icon}>
+                                {/* <FontAwesomeIcon icon={['fab', 'google']} /> */}
                                     {/* <i className="fa fa_clipboard"></i> */}
                                 </span>
                                 <span className={styles.title}>AllCoders</span>
