@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
-
+* {
+  box-sizing: border-box;
+}
 body{
   background: #f2f2f2;
   color:#333;
   font-family: "Nunito";
+  margin: 0;
 }
 
 a{
@@ -12,28 +15,53 @@ a{
 }
 
 .content {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
   max-width: 960px;
-  margin: 0 auto;
+}
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.col-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
 }
 
 nav {
-  margin: 10px auto 80px;
-  padding: 10px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #ddd;
+  height: 100%;
+  background: #f4c095;
 }
-nav a:not(:first-child) {
+/* nav a:not(:first-child) {
   margin-left: 20px;
-}
+} */
 
 footer {
   display: block;
   text-align: center;
   padding: 30px 0;
-  margin-top: 60px;
-  color: #777;
+  color: #fff;
   border-top: 1px solid #eaeaee;
 }
 
@@ -44,4 +72,65 @@ footer {
 .not-found a {
   color: #1a1a1a;
   text-decoration: underline;
+}
+/* style form */
+.form-group {
+  display: flex;
+  margin-bottom: 40px;
+}
+.form-group-btn {
+  display: flex;
+  justify-content: end;
+  margin-top: 100px;
+}
+
+.btn {
+  position: relative;
+  padding: 1em 1.5em;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  font-size: 18px;
+  margin: 1em 0.8em;
+  font-size: 18px;
+  padding: 10px;
+  width: 150px;
+  color: #1d7874;
+}
+.btn:after, .btn:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #1d7874;
+  transition: all 0.3s ease;
+  transform: scale(0.85);
+}
+
+.btn:hover:before {
+  top: 0;
+  transform: scale(1);
+}
+.btn:hover:after {
+  transform: scale(1);
+}
+
+/* style table  */
+
+th {
+  padding: 10px 50px;
+  font-size: 25px;
+  background: #fff;  
+}
+
+td {
+  padding: 10px;
+  font-size: 25px;
+  background: #fff;
+  width: 100%;
+  text-align: center;
 }

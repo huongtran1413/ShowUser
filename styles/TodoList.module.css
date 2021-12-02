@@ -1,0 +1,50 @@
+.modal_lable {
+    font-size: 18px;
+    font-weight: 700;
+    width: 150px;
+}
+
+.modal_input {
+    border: none;
+    border-bottom: 1px solid #1d7874;
+    width: 100%;
+}
+
+.modal_input:focus-visible {
+    outline: 0;
+}
+
+.btnShowModal {
+    position: relative;
+    padding: 1em 1.5em;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    font-size: 18px;
+    margin: 1em 0.8em;
+    font-size: 18px;
+    padding: 10px;
+    width: 150px;
+    color: #1d7874;
+}
+.btnShowModal:after, .btnShowModal:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #1d7874;
+    transition: all 0.3s ease;
+    transform: scale(0.85);
+  }
+
+.btnShowModal:hover:before {
+    top: 0;
+    transform: scale(1);
+}
+.btnShowModal:hover:after {
+    transform: scale(1);
+}

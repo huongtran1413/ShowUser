@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from '../../styles/Coder.module.css'
 
 export const getStaticPaths = async () => {
     const res = await fetch ('https://jsonplaceholder.typicode.com/users');
@@ -39,12 +40,30 @@ export default function DetailCoder( {coder}) { // {lay 1 array tu cai object tr
     console.log(coder)
     return (
         <div>
-            <h1>Detail</h1>
-             <h1>{coder.name} Detail</h1>
-           <p>Email: {coder.email}</p>
-            <p>Website: {coder.website}</p>
-            <p>Address: {coder.address.street}, {coder.address.city}</p>
-            <p>Company: {coder.company.name}</p>
+            <h1>{coder.name} Detail</h1>
+            <table className={styles.table}>
+                <tr>
+                    <th>Name</th>
+                    <td>{coder.name}</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>{coder.email}</td>
+                </tr>
+                <tr>
+                    <th>Website</th>
+                    <td>{coder.website}</td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td>{coder.address.street}, {coder.address.city}</td>
+                </tr>
+                <tr>
+                    <th>Company</th>
+                    <td>{coder.company.name}</td>
+                </tr>
+            </table>
+            
         </div>
     )
 }

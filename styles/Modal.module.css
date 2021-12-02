@@ -1,0 +1,42 @@
+.modal {
+    background: #fff;
+    width: 500px;
+    height: auto;
+    border-radius: 15px;
+    padding: 50px;
+    z-index: 100;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    border-bottom: 1px solid #1d7874;
+}
+
+.body {
+    padding-top: 10px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.btn_close {
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    color: #777;
+}

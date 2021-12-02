@@ -25,9 +25,7 @@ export default function Home() {
                             width:150px;
                             padding:8px 0;
                             margin:20px auto;
-                            background:#ffbf49;
                             border-radius:4px;
-                            color:black;
                             text-align:center;
                         }
                     `
